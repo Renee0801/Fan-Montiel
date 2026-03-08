@@ -3,16 +3,16 @@
 ## Overview
 The purpose of this project is to examine if a player's salary in Major League Soccer (MLS) reflects measurable on field performance. Professional soccer teams invest a lot in their players through their salary, however salary does not always align with their production. Our project will analyze whether higher paid MLS players also produce bigger statistical outputs and whether some players appear overvalued or undervalued relative to their performance.
 
-To answer this question we will combine two publically available datasets. The first dataset is the 2025 Major League Soccer player statistics page from FBref, which provides season level player performance data. The second dataset is the 2025 MLS Player Association Salary Guide, which provides player compensation data, including base salary and guranteed compensation. The MLSPA guide states that the 2025 data covers players under contract as of October 1, 2025 and it explains how guranteed compensation is calculated.
+To answer this question we will combine two publically available datasets. The first dataset is the 2025 Major League Soccer player statistics page from FBref, which provides season level player performance data. The second dataset is the 2025 MLS Player Association Salary Guide, which provides player compensation data, including base salary and guaranteed compensation. The MLSPA guide states that the 2025 data covers players under contract as of October 1, 2025 and it explains how guaranteed compensation is calculated.
 
 After collecting the data we will clean the datasets, by standardizing club names, and then merge the datasets. We will use exploratory data analysis, visualizations, correlation analysis, and regression modeling to identify relationships between player salaries and performance statistics. We will also make our own variables like goals per 90 minutes and salary per goal contribution to help us make comparisons more meaningful across players with varying playing time.
 
-This project is desgined to demonstrate the full data lifecycle, including acquisition, cleaning, integration, analysis, documentation and reproducibility.
+This project is designed to demonstrate the full data lifecycle, including acquisition, cleaning, integration, analysis, documentation and reproducibility.
 
 ## Team
 Gil Montiel
 -  Collect and organize the FBred MLS player statistics dataset
--  Convert the players statistics data into a structured formar for analysis
+-  Convert the players statistics data into a structured format for analysis
 -  Clean the player statistic dataset
 -  Standardized player names and club names across both datasets
 -  Merge statistics of both datasets using Pandas
@@ -28,15 +28,13 @@ Ruilin Fan
 - Assist with interpretation of results and written explanations
 - Contribute to documentation, README preparation, and final report writing
 
-Both team members will collaborate on research question refinement, interpretation of results, and ensuring that the final workflow is reproducible and clearly documented.
-
 ## Research / Business Questions
 This project aims to answer the following questions:
-1. Do higher_paid MLS players produce stronger on-field performance statistics?
+1. Do higher-paid MLS players produce stronger on-field performance statistics?
 2. Which performance metrics are most strongly associated with salary or guaranteed compensation?
 3. Are some MLS players overpaid or underpaid relative to their production?
 4. How efficiently do MLS teams convert player salary spending into on-field performance?
-These questions make the project both analytical and practical since they connect performance measurement with financial decision-making.
+#### These questions make the project both analytical and practical since they connect performance measurement with financial decision-making.
 
 ## Datasets
 ### Dataset 1 - FBref 2025 MLS Player Statistics
@@ -59,7 +57,7 @@ This dataset represents player performance and will be used as the main source f
 ### Dataset 2 - MLS Players Association Salary Guide
 #### Source: MLS Players Association
 Link: https://mlsplayers.org/resources/salary-guide
-This dataset contains MLS player compensation data. The MLSPA salary guide states that the 2025 Salary Guide includes all MLS playyers under contract as of October 1, 2025 and reports both current annuaized base salary and annualized average guranteed compensation. It also explains that guaranteed compensation includes base salary plus guaranteed bonuses annualized over the term of the contract while excluding performance bonuses.
+This dataset contains MLS player compensation data. The MLSPA salary guide states that the 2025 Salary Guide includes all MLS players under contract as of October 1, 2025 and reports both current annualized base salary and annualized average guaranteed compensation. It also explains that guaranteed compensation includes base salary plus guaranteed bonuses annualized over the term of the contract while excluding performance bonuses.
 #### Example variables
 - First name
 - Last name
@@ -91,8 +89,8 @@ Integration will be performed in Python using Pandas merge operations.
 -  Start inspection of variables in datasets (Gil)
 #### Week 2
 -  Clean and preprocess both datasets (Gil)
--  Standardize team names because datasets have small diffrences in names. For example "FC Dallas" v.s "F.C Dallas". (Gil)
--  Convert salary varibales into numbers and then merge the datasets (Ruilin)
+-  Standardize team names because datasets have small differences in names. For example "FC Dallas" v.s "F.C Dallas". (Gil)
+-  Convert salary variables into numbers and then merge the datasets (Ruilin)
 #### Week 3
 -  Conduct exploratory data analysis (Ruilin & Gil)
 -  Create summary statistics and visualizations (Ruilin)
@@ -102,13 +100,13 @@ Integration will be performed in Python using Pandas merge operations.
 -  Interpret and explain our conclusion/ findings (Ruilin & Gil)
 -  Submit final project materials (Ruilin & Gil)
 
-## Ethical Data Handling and Legality / Rights
-Both datasets are publicly accessible and will be used only for educational purposes in this academic project. The FBref dataset is drawn from a public MLS statistics page hosted by FBref, a public football statistics site. The MLSPA dataset is published directly by the MLS Players Association through its salary guide and is intended to provide public transparency regarding player compensation.
+## Ethical Data Handling and Legality / Rights of Datasets
+Both datasets are publicly accessible and will be used only for educational purposes in this school project. The FBref dataset is drawn from a public MLS statistics page hosted by FBref, a public football statistics site. The MLSPA dataset is published directly by the MLS Players Association through its salary guide and is intended to provide public transparency regarding player compensation.
 
-We will not use either dataset for commercial redistribution or resale. Instead, the data will only be used for analysis, visualization, and discussion within the course project.
+We will not use either dataset for commercial redistribution or any other monetary reasons. Instead, the data will only be used for analysis, visualization, and discussion within the course project.
 
 To handle the data ethically we will:
-- cite the original source links in the repository and report
+- cite the original source links in project
 - avoid misrepresenting the meaning of salary fields
 - document any cleaning or transformation steps
 - store only the data necessary for the project analysis
@@ -117,7 +115,7 @@ To handle the data ethically we will:
 Potential constraints include:
 - player and club names may not match exactly across the two sources
 - salary data and performance data may reflect slightly different reporting conventions
-- some players may have limited minutes which can distort totals
+- some players may have limited minutes which can distort totals. However, these players are likely to earn less because of their limited contribution. We will likely focus on the higher earners in the league throughout our project.
 - some important variables such as injuries or tactical role are not included
 
 ## Gap 
@@ -125,4 +123,4 @@ There are several gaps in the planned analysis:
 - salary does not capture all contract context such as incentives not included in guaranteed compensation
 - performance may depend heavily on position but raw totals like goals and assists do not fully reflect defensive roles
 - the project uses publicly available season statistics rather than detailed event level tracking data
-Future work could incorporate position specific metrics metrics, more advanced performance indicators, or team level contextual variables.
+#### Future work could incorporate position specific metrics metrics, more advanced performance indicators, or team level contextual variables. For example, only focusing on attackers since they are the players more likely to record goal contributions as opposed to midfielders and defenders.

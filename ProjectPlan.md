@@ -19,3 +19,44 @@ Gil Montiel
 -  Create our own metrics like goals per 90 and salary per goal contribution
 -  Assist with exploratory analysis and visualizations
 
+Ruilin Fan
+- Collect and organize the MLSPA salary dataset
+- Convert the salary data into a structured format for analysis
+- Clean salary fields and convert compensation values into numeric format
+- Verify accuracy of merged records and help resolve name mismatches
+- Perform exploratory data analysis and create visualizations
+- Assist with interpretation of results and written explanations
+- Contribute to documentation, README preparation, and final report writing
+
+Both team members will collaborate on research question refinement, interpretation of results, and ensuring that the final workflow is reproducible and clearly documented.
+
+## Research / Business Questions
+This project aims to answer the following questions:
+1. Do higher_paid MLS players produce stronger on-field performance statistics?
+2. Which performance metrics are most strongly associated with salary or guaranteed compensation?
+3. Are some MLS players overpaid or underpaid relative to their production?
+4. How efficiently do MLS teams convert player salary spending into on-field performance?
+These questions make the project both analytical and practical since they connect performance measurement with financial decision-making.
+
+## Datasets
+### Dataset 1 - FBref 2025 MLS Player Statistics
+#### Source: FBref
+Link: https://fbref.com/en/comps/22/2025/stats/2025-Major-League-Soccer-Stats 
+This dataset contains player-level statistics for the 2025 Major League Soccer season.FBref is a widely used public football statistics site, and the MLS 2025 stats page provides player performance information for the league.
+#### Example variables
+- Player name
+- Squad / club
+- Position
+- Age
+- Matches played
+- Starts
+- Minutes played
+- Goals
+- Assists
+- Expected goals and expected assists depending on the selected table
+This dataset represents player performance and will be used as the main source for measuring productivity.
+
+### Dataset 2 - MLS Players Association Salary Guide
+#### Source: MLS Players Association
+Link: https://mlsplayers.org/resources/salary-guide
+This dataset contains MLS player compensation data. The MLSPA salary guide states that the 2025

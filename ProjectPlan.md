@@ -77,6 +77,8 @@ The two datasets will be integrated at the player level.
 - Position
 
 Because the two datasets come form different sources, some player or club names may not match perfectly. To address this, we will standardize formatting, remove extra spaces, and manually verify mismatches when needed.
+
 The merged dataset will allow us to compare salary and performance in one file.
+
 Integration will be performed in Python using Pandas merge operations.
 

@@ -83,20 +83,20 @@ The merged dataset will allow us to compare salary and performance in one file.
 Integration will be performed in Python using Pandas merge operations.
 
 ## Timeline
-Week 1
+#### Week 1
 -  Finalize research questions
 -  Find two datasets and make sure they are analyzeable on python
 -  Repository structure
 -  Start inspection of variables in datasets
-Week 2
+#### Week 2
 -  Clean and preprocess both datasets
 -  Standardize team names because datasets have small diffrences
 -  Convert salary varibales into numbers and then merge the datasets
-Week 3
+#### Week 3
 -  Conduct exploratory data analysis
 -  Create summary statistics and visualizations
 -  Build our own variables in the merged dataset. (goal contribution per 90 minutes and salary per goal contribution)
-Week 4
+#### Week 4
 -  Perform correlation and regression analysis
 -  Interpret and explain our conclusion/ findings
 -  Submit final project materials

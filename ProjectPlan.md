@@ -52,6 +52,7 @@ This dataset contains player-level statistics for the 2025 Major League Soccer s
 - Goals
 - Assists
 - Expected goals and expected assists depending on the selected table
+
 This dataset represents player performance and will be used as the main source for measuring productivity.
 
 ### Dataset 2 - MLS Players Association Salary Guide
@@ -65,6 +66,7 @@ This dataset contains MLS player compensation data. The MLSPA salary guide state
 - Position
 - Base salary
 - Guaranteed compensation
+
 This dataset represents player financial compensation and will be used to evaluate whether salaries align with performance.
 
 ## Dataset Integration

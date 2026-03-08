@@ -59,4 +59,23 @@ This dataset represents player performance and will be used as the main source f
 ### Dataset 2 - MLS Players Association Salary Guide
 #### Source: MLS Players Association
 Link: https://mlsplayers.org/resources/salary-guide
-This dataset contains MLS player compensation data. The MLSPA salary guide states that the 2025
+This dataset contains MLS player compensation data. The MLSPA salary guide states that the 2025 Salary Guide includes all MLS playyers under contract as of October 1, 2025 and reports both current annuaized base salary and annualized average guranteed compensation. It also explains that guaranteed compensation includes base salary plus guaranteed bonuses annualized over the term of the contract while excluding performance bonuses.
+#### Example variables
+- First name
+- Last name
+- Club
+- Position
+- Base salary
+- Guaranteed compensation
+This dataset represents player financial compensation and will be used to evaluate whether salaries align with performance.
+
+## Dataset Integration
+The two datasets will be integrated at the player level.
+#### Likely shared identifiers
+- Player name
+- Club / squad
+- Position
+Because the two datasets come form different sources, some player or club names may not match perfectly. To address this, we will standardize formatting, remove extra spaces, and manually verify mismatches when needed.
+The merged dataset will allow us to compare salary and performance in one file.
+Integration will be performed in Python using Pandas merge operations.
+

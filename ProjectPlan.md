@@ -102,4 +102,27 @@ Integration will be performed in Python using Pandas merge operations.
 -  Interpret and explain our conclusion/ findings (Ruilin & Gil)
 -  Submit final project materials (Ruilin & Gil)
 
+## Ethical Data Handling and Legality / Rights
+Both datasets are publicly accessible and will be used only for educational purposes in this academic project. The FBref dataset is drawn from a public MLS statistics page hosted by FBref, a public football statistics site. The MLSPA dataset is published directly by the MLS Players Association through its salary guide and is intended to provide public transparency regarding player compensation.
 
+We will not use either dataset for commercial redistribution or resale. Instead, the data will only be used for analysis, visualization, and discussion within the course project.
+
+To handle the data ethically we will:
+- cite the original source links in the repository and report
+- avoid misrepresenting the meaning of salary fields
+- document any cleaning or transformation steps
+- store only the data necessary for the project analysis
+
+## Constraints
+Potential constraints include:
+- player and club names may not match exactly across the two sources
+- salary data and performance data may reflect slightly different reporting conventions
+- some players may have limited minutes which can distort totals
+- some important variables such as injuries or tactical role are not included
+
+## Gap 
+There are several gaps in the planned analysis:
+- salary does not capture all contract context such as incentives not included in guaranteed compensation
+- performance may depend heavily on position but raw totals like goals and assists do not fully reflect defensive roles
+- the project uses publicly available season statistics rather than detailed event level tracking data
+Future work could incorporate position specific metrics metrics, more advanced performance indicators, or team level contextual variables.

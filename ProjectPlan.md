@@ -84,21 +84,22 @@ Integration will be performed in Python using Pandas merge operations.
 
 ## Timeline
 #### Week 1
--  Finalize research questions
--  Find two datasets and make sure they are analyzeable on python
--  Repository structure
--  Start inspection of variables in datasets
+-  Finalize research questions (Gil & Ruilin)
+-  Find two datasets and make sure they are analyzeable on python (Gil & Ruilin)
+-  Set up file in Github and make sure it is working for both members (Gil)
+-  Complete initial milestone working together (Gil & Ruilin)
+-  Start inspection of variables in datasets (Gil)
 #### Week 2
--  Clean and preprocess both datasets
--  Standardize team names because datasets have small diffrences
--  Convert salary varibales into numbers and then merge the datasets
+-  Clean and preprocess both datasets (Gil)
+-  Standardize team names because datasets have small diffrences in names. For example "FC Dallas" v.s "F.C Dallas". (Gil)
+-  Convert salary varibales into numbers and then merge the datasets (Ruilin)
 #### Week 3
--  Conduct exploratory data analysis
--  Create summary statistics and visualizations
--  Build our own variables in the merged dataset. (goal contribution per 90 minutes and salary per goal contribution)
+-  Conduct exploratory data analysis (Ruilin & Gil)
+-  Create summary statistics and visualizations (Ruilin)
+-  Build our own variables in the merged dataset. (goal contribution per 90 minutes and salary per goal contribution) (Gil)
 #### Week 4
--  Perform correlation and regression analysis
--  Interpret and explain our conclusion/ findings
--  Submit final project materials
+-  Perform correlation and regression analysis (Ruilin)
+-  Interpret and explain our conclusion/ findings (Ruilin & Gil)
+-  Submit final project materials (Ruilin & Gil)
 
 

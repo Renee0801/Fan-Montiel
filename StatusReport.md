@@ -87,7 +87,31 @@ Defenders don’t accumulate goals/assists like attackers
 - Acknowledge as limitation  
 - Potentially focus analysis on attacking players
 
- ## No chamges to our original plan, feedback suggested no changes
+## No chamges to our original plan, feedback suggested no changes
+
+## Team Member Contributions:
+### Gil Montiel
+For this milestone, I focused primarily on data preparation and integration. I cleaned the FBref statistics dataset by removing duplicate columns, selecting relevant variables, and converting data types for analysis. I also standardized player and club names, including handling inconsistencies such as abbreviations, formatting differences, and special characters.
+
+In addition, I led the dataset integration process by identifying appropriate merge keys and resolving mismatches between the two datasets. This included creating mappings for inconsistent team names and applying cleaning functions to improve player name matching. I also began implementing feature engineering variables such as goal contributions and goals per 90 minutes.
+
+Finally, I contributed to debugging and refining the workflow in Python to ensure the merged dataset was accurate and usable for analysis.
+
+### Ruilin Fan
+
+
+
+### Collaborative Work
+Both team members worked together to:
+
+- refine and confirm research questions  
+- identify key challenges in merging real-world datasets  
+- design the data cleaning and integration workflow  
+- evaluate the quality of the merged dataset  
+- plan the next steps for exploratory data analysis and modeling  
+
+This collaborative effort ensured that both the technical and analytical aspects of the project are aligned moving forward.
+
 
 
 

@@ -67,5 +67,29 @@ This will be completed after Exploratory Data Analysis and finalized dataset mer
 - Run correlation and regression
 - Write final report
 
+## Challenges and Solutions
+### 1. Player name mismatches  
+Different formats between datasets (full name vs split names)
+**Solution:**
+- Standardize names  
+- Trim whitespace  
+- Combine first and last names  
+- Manually verify mismatches
+- 
+### 2. Club naming inconsistencies  
+Example: slight formatting differences in team names  
+**Solution:**
+- Create a map to standardize team names
+
+### 3. Performance differences by position  
+Defenders don’t accumulate goals/assists like attackers  
+**Solution:**
+- Acknowledge as limitation  
+- Potentially focus analysis on attacking players
+
+ ## No chamges to our original plan, feedback suggested no changes
+
+
+
 
 

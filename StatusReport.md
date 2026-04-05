@@ -14,9 +14,18 @@ We finalized our research questions from Milestone 2:
 
 These questions remain unchanged and clearly align with our datasets.
 
-## 2. Clean and Preprocessing data
+## 2. Clean and Preprocess data
 **Status: In Progress**
 We began loading both datasets into Python using Pandas.
 - The salary dataset is easier to load and clean
 - The FBref dataset requires more formatting depending on the table
 We have succesfully inspected columns and confirmed key variables. We have completed the cleaning & preprocessing in Python and our processed datasets can be found here: (LINK HERE). However, we want to use the new tool shown in class "OpenRefine" to redo our preprocessing to double check our work with another platform.
+
+## 3. Merge Datasets
+**Status: Not complete (Next step)**
+We identified merge keys:
+-Player name
+-Club
+However, we have not finalized the merge yet because cleaning must be completed first. Our in progress merge is not picking up as many players as we want so we are still fine tuning it. Our in progress merged dataset is here: (LINK)
+
+

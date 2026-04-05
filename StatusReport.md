@@ -27,8 +27,8 @@ However, we want to use the new tool shown in class "OpenRefine" to redo our pre
 ## 3. Merge Datasets
 **Status: In progress (Next step)**
 We identified merge keys:
--Player name
--Club
+- Player name
+- Club
 However, we have not finalized our merged dataset because we want to compare the one we currenlty have with another one we plan on doing with OpenRefine. Our in progress merged dataset is here: (LINK)
 
 ## 4. Create Derived Variables

@@ -87,7 +87,8 @@ Defenders don’t accumulate goals/assists like attackers
 - Acknowledge as limitation  
 - Potentially focus analysis on attacking players
 
-## No chamges to our original plan, feedback suggested no changes
+## Changes to Project Plan  
+While our core research questions remain unchanged, we made minor adjustments to our workflow based on progress so far. Specifically, we decided to reprocess and validate our dataset merging using OpenRefine in addition to Python to improve data quality and matching accuracy. This adjustment was made after encountering inconsistencies in player names and club identifiers across datasets.
 
 ## Team Member Contributions:
 ### Gil Montiel
@@ -98,7 +99,11 @@ In addition, I led the dataset integration process by identifying appropriate me
 Finally, I contributed to debugging and refining the workflow in Python to ensure the merged dataset was accurate and usable for analysis.
 
 ### Ruilin Fan
+For this milestone, I focused primarily on the salary dataset and early-stage analysis. I collected and structured the MLSPA salary data, ensuring that all compensation fields were correctly formatted and converted into numeric values for analysis. I also standardized player names by combining first and last names and aligning naming conventions with the FBref dataset to improve matching accuracy.
 
+In addition, I helped verify the quality of the preliminary merged dataset by checking for unmatched records and inconsistencies across datasets. I contributed to identifying potential issues in the merge process and supported the decision to reprocess the data using OpenRefine for validation.
+
+I also assisted in planning the exploratory data analysis phase by identifying relevant variables and potential visualizations, such as salary distributions and performance efficiency metrics. Finally, I contributed to documenting the workflow and writing sections of this report to ensure clarity and completeness.
 
 
 ### Collaborative Work

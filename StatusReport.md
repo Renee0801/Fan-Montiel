@@ -19,7 +19,7 @@ These questions remain unchanged and clearly align with our datasets.
 We began loading both datasets into Python using Pandas.
 - The salary dataset is easier to load and clean
 - The FBref dataset requires more formatting depending on the table
-We have succesfully inspected columns and confirmed key variables. We have completed the cleaning & preprocessing in Python and our processed datasets can be found here: (LINK HERE). For the FBref dataset text fields such as player names and club names were cleaned by trimming whitespace and converting values to a consistent lowercase format. Numeric variables (such as minutes, goals, and assists) were converted from string format to numeric values to allow for analysis.
+We have succesfully inspected columns and confirmed key variables. We have completed the cleaning & preprocessing in Python and our processed datasets can be found in the jupyter notebook in our tag (cell #45 & 46). For the FBref dataset text fields such as player names and club names were cleaned by trimming whitespace and converting values to a consistent lowercase format. Numeric variables (such as minutes, goals, and assists) were converted from string format to numeric values to allow for analysis.
 Additionally, rows that did not represent valid players (such as headers or placeholder rows like “squad”) were removed. In cases where players appeared multiple times due to transfers between clubs, duplicates were resolved by keeping the observation with the highest minutes played, representing the player’s primary team for the season. The salary dataset required standardization of column names and formatting. First and last name fields were combined into a single full player name variable to match the structure of the statistics dataset. Salary fields, which were originally formatted as strings with dollar signs and commas, were cleaned and converted into numeric values. Similar to the statistics dataset, text fields were standardized by removing extra whitespace and converting values to lowercase. Non-relevant entries such as “MLS pool,” “retired,” and “without a club” were removed, since these players could not be matched to performance data. Moreover, to clean both datasets we had to make a new pool of club names to erase differences in club names and ensure the names used in both datasets matched.
 Despite our efforts, some players could not be matched due to differences in naming conventions or data availability. This is expected when working with real-world datasets from different sources.
 However, we want to use the new tool shown in class "OpenRefine" to redo our preprocessing to double check our work with another platform.
@@ -29,7 +29,7 @@ However, we want to use the new tool shown in class "OpenRefine" to redo our pre
 We identified merge keys:
 - Player name
 - Club
-However, we have not finalized our merged dataset because we want to compare the one we currenlty have with another one we plan on doing with OpenRefine. Our in progress merged dataset is here: (LINK)
+However, we have not finalized our merged dataset because we want to compare the one we currenlty have with another one we plan on doing with OpenRefine. Our in progress merged dataset is found in our jupyter notebook in cell #47. Notebook can be found in our tag as is labeled "Dataset Work".
 
 ## 4. Create Derived Variables
 **Status: Partially started**

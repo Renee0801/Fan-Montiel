@@ -101,8 +101,6 @@ Finally, I contributed to debugging and refining the workflow in Python to ensur
 ### Ruilin Fan
 For this milestone, I focused on cleaning and preparing the MLSPA salary dataset. I processed the raw salary data by combining first and last name fields into a single player identifier and standardizing text fields such as player names, team names, and positions by trimming whitespace and converting values to lowercase. I also converted salary-related variables (base salary and guaranteed compensation) from string format into numeric values by removing formatting characters such as dollar signs and commas. Additionally, I removed non-player entries such as "MLS pool," "retired," and "without a club" to ensure the dataset could be accurately merged with performance data.
 
-In addition, I helped verify the quality of the preliminary merged dataset by checking for unmatched records and inconsistencies across datasets. I contributed to identifying potential issues in the merge process and supported the decision to reprocess the data using OpenRefine for validation.
-
 I also assisted in planning the exploratory data analysis phase by identifying relevant variables and potential visualizations, such as salary distributions and performance efficiency metrics. Finally, I contributed to documenting the workflow and writing sections of this report to ensure clarity and completeness.
 
 ### Collaborative Work

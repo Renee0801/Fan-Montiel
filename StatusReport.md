@@ -13,13 +13,11 @@ We finalized our research questions from Milestone 2:
 - How efficiently do MLS teams convert salary into performance?
 
 These questions remain unchanged and clearly align with our datasets.
-The cleaned dataset is stored at:
-/data/processed/salary_cleaned.csv
 
 ## 2. Clean and Preprocess data
 **Status: Complete**
 We began loading both datasets into Python using Pandas.
-- The salary dataset is easier to load and clean
+- We cleaned the MLSPA salary dataset in Python and prepared it for later analysis. The raw file contained salary values stored as text, separate first and last name fields, and several non player entries.Our cleaning process included: combining first and last names into one player name field, standardizing text fields, removing non player entries, converting salary columns to numeric values, standardizing team names. The cleaned dataset can be found here: /data/processed/salary_cleaned.csv
 - The FBref dataset requires more formatting depending on the table
 We have succesfully inspected columns and confirmed key variables. We have completed the cleaning & preprocessing in Python and our processed datasets can be found in the jupyter notebook in our tag (cell #45 & 46). For the FBref dataset text fields such as player names and club names were cleaned by trimming whitespace and converting values to a consistent lowercase format. Numeric variables (such as minutes, goals, and assists) were converted from string format to numeric values to allow for analysis.
 Additionally, rows that did not represent valid players (such as headers or placeholder rows like “squad”) were removed. In cases where players appeared multiple times due to transfers between clubs, duplicates were resolved by keeping the observation with the highest minutes played, representing the player’s primary team for the season. The salary dataset required standardization of column names and formatting. First and last name fields were combined into a single full player name variable to match the structure of the statistics dataset. Salary fields, which were originally formatted as strings with dollar signs and commas, were cleaned and converted into numeric values. Similar to the statistics dataset, text fields were standardized by removing extra whitespace and converting values to lowercase. Non-relevant entries such as “MLS pool,” “retired,” and “without a club” were removed, since these players could not be matched to performance data. Moreover, to clean both datasets we had to make a new pool of club names to erase differences in club names and ensure the names used in both datasets matched.
@@ -50,7 +48,7 @@ However we plan to make these visuals:
 - Distribution of performance metrics
 
 ## 6. Correlation and Regression Analysis
-**Status: Not Started**
+**Status: Not Started (Preparation completed)**
 This will be completed after Exploratory Data Analysis and finalized dataset merging.
 
 ## Updated Timeline:
@@ -101,12 +99,11 @@ In addition, I led the dataset integration process by identifying appropriate me
 Finally, I contributed to debugging and refining the workflow in Python to ensure the merged dataset was accurate and usable for analysis.
 
 ### Ruilin Fan
-For this milestone, I focused primarily on the salary dataset and early-stage analysis. I collected and structured the MLSPA salary data, ensuring that all compensation fields were correctly formatted and converted into numeric values for analysis. I also standardized player names by combining first and last names and aligning naming conventions with the FBref dataset to improve matching accuracy.
+For this milestone, I focused on cleaning and preparing the MLSPA salary dataset. I processed the raw salary data by combining first and last name fields into a single player identifier and standardizing text fields such as player names, team names, and positions by trimming whitespace and converting values to lowercase. I also converted salary-related variables (base salary and guaranteed compensation) from string format into numeric values by removing formatting characters such as dollar signs and commas. Additionally, I removed non-player entries such as "MLS pool," "retired," and "without a club" to ensure the dataset could be accurately merged with performance data.
 
 In addition, I helped verify the quality of the preliminary merged dataset by checking for unmatched records and inconsistencies across datasets. I contributed to identifying potential issues in the merge process and supported the decision to reprocess the data using OpenRefine for validation.
 
 I also assisted in planning the exploratory data analysis phase by identifying relevant variables and potential visualizations, such as salary distributions and performance efficiency metrics. Finally, I contributed to documenting the workflow and writing sections of this report to ensure clarity and completeness.
-
 
 ### Collaborative Work
 Both team members worked together to:

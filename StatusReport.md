@@ -13,6 +13,8 @@ We finalized our research questions from Milestone 2:
 - How efficiently do MLS teams convert salary into performance?
 
 These questions remain unchanged and clearly align with our datasets.
+The cleaned dataset is stored at:
+/data/processed/salary_cleaned.csv
 
 ## 2. Clean and Preprocess data
 **Status: Complete**

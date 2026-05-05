@@ -155,5 +155,60 @@ Finally, interpreting the results required careful consideration. The dataset pr
 Overall, these challenges highlight the complexity of working with real-world data and the importance of careful data cleaning, integration, and interpretation.
 
 
+## Reproducing
 
+To reproduce this project, follow these steps:
+
+1. Clone the GitHub repository.
+
+2. Install required dependencies:
+   - Python 3.x
+   - pandas
+   - numpy
+   - matplotlib
+   - scikit-learn
+
+3. Place raw datasets in:
+   - `data/raw/`
+
+4. Run the data integration script:
+   - Load FBref and MLSPA datasets
+   - Clean column names and formats
+   - Create `player_key` and `club_key`
+   - Merge datasets using an outer join
+
+5. Export merged dataset for OpenRefine:
+   - `raw_merged_for_openrefine.csv`
+
+6. OpenRefine cleaning:
+   - Load dataset into OpenRefine
+   - Apply clustering on `player_key`
+   - Resolve name inconsistencies
+   - Export cleaned dataset
+
+7. Load cleaned dataset into Python:
+   - Filter rows where `_merge = both`
+   - Remove invalid rows (e.g., header rows)
+   - Convert numeric columns
+
+8. Handle duplicates:
+   - Sort by minutes played
+   - Keep one row per player
+
+9. Generate analytical columns:
+   - goal_contributions
+   - goals_per_90
+   - assists_per_90
+   - salary_per_goal_contribution
+
+10. Run analysis:
+   - Generate summary statistics
+   - Create scatter plots
+   - Compute correlations
+
+11. Outputs:
+   - Cleaned dataset: `data/processed/`
+   - Visualizations: `figures/`
+
+Running these steps will fully reproduce the project results.
 

@@ -56,8 +56,15 @@ There are some legal and ethical constraints. The dataset is public and publishe
 
 ### Relationship Between the Datasets
 
-NEED TO COMPLETE!!!!!!!
+The two datasets used in this project provide complementary perspectives on MLS players. The FBref dataset captures player performance through match statistics such as goals, assists, minutes played, and appearances, while the MLSPA dataset captures player compensation through salary variables including base salary and guaranteed compensation. Together, these datasets allow for direct analysis of how financial investment in players relates to on-field productivity.
 
+The datasets were integrated at the player level using a standardized identifier. Because player names were not consistently formatted across the two sources, a cleaning process was required before merging. We created a `player_key` variable by normalizing names (lowercasing, removing punctuation, and trimming whitespace) and then used OpenRefine clustering techniques to resolve inconsistencies such as reversed names, spelling differences, and special characters. Club names were also standardized using a mapping approach to ensure consistency between datasets.
+
+An outer join was initially performed in Python to preserve all records and identify mismatches between the datasets. This allowed us to analyze unmatched observations using the `_merge` indicator (left_only, right_only, both). After cleaning and improving name alignment, we restricted the final analytical dataset to records where `_merge = both`, ensuring that each observation contained both performance and salary information.
+
+The integration process also required handling duplicate players, which occurred when players appeared multiple times due to transfers or dataset structure. These duplicates were resolved by keeping the observation with the highest minutes played, representing the player’s primary contribution during the season.
+
+The final merged dataset provides a unified view of MLS players, enabling meaningful comparisons between salary and performance metrics and supporting the core research questions of this project.
 
 ## Data Quality
 
@@ -98,3 +105,17 @@ Upon completing the data cleaning for both datasets individually, the next task 
 Overall, the primary focus of this data cleaning effort was to enhance data consistency, eliminate errors, and prepare the data for subsequent analysis. Although the steps taken were relatively simple and straightforward, they were crucial for ensuring the reliability of the analytical results. Had these necessary adjustments not been made, the data integration process would not have proceeded smoothly, potentially leading to analytical conclusions that were misleading.
 
 ## Findings
+
+After completing data cleaning, OpenRefine standardization, and final duplicate handling, the final merged dataset contained **637 MLS players** with both performance and salary information. For the main analysis, we filtered to players with at least **500 minutes played**, leaving **442 players**. This threshold helped reduce distortion from players with very limited playing time.
+
+Descriptive statistics showed that the average guaranteed compensation in the final dataset was approximately **$715,515**, while the median was about **$428,299**. The large gap between the mean and median indicates that MLS salary distribution is skewed by a smaller number of highly paid players. On average, players recorded about **1.73 goals**, **1.29 assists**, and **3.02 total goal contributions**.
+
+The strongest salary relationship came from total attacking production. In the filtered analysis dataset, guaranteed compensation had a correlation of **0.594** with goal contributions, **0.559** with goals, and **0.475** with assists. This suggests that players with more goals and assists generally earn higher salaries, but the relationship is moderate rather than perfect. Minutes played had a weaker correlation with salary at **0.255**, meaning playing time alone does not explain compensation as well as attacking output.
+
+The top goal contributor was **Lionel Messi**, with **45 goal contributions** for Inter Miami, followed by **Anders Dreyer** with **36**, **Denis Bouanga** with **31**, and both **Philip Zinckernagel** and **Sam Surridge** with **27**. These examples support the idea that elite attacking production is often connected to higher compensation, especially in Messi’s case, where his guaranteed compensation was over **$20 million**.
+
+However, efficiency metrics showed a more complicated pattern. Goal contributions per 90 minutes had a correlation of **0.457** with guaranteed compensation, while goals per 90 had a correlation of **0.434** and assists per 90 had a correlation of **0.313**. These values are lower than the correlation for total goal contributions, suggesting that salary may be more closely tied to total production and reputation than pure per-minute efficiency.
+
+The salary efficiency metric also revealed important outliers. For example, **Anthony Markanich** recorded **10 goal contributions** with guaranteed compensation of **$104,000**, resulting in about **$10,400 per goal contribution**. Other efficient players included **Darren Yapi**, **Paul Rothrock**, and **Alex Freeman**, each producing strong value relative to salary. These players show that lower-paid players can still provide meaningful production.
+
+Finally, the regression model using goal contributions and minutes played explained about **35.4%** of the variation in guaranteed compensation, based on an **R-squared of 0.354**. The model estimated that each additional goal contribution was associated with approximately **$146,749** more in guaranteed compensation, holding minutes constant. Each additional minute played was associated with about **$88** more in compensation. Overall, the findings show that performance matters, but salary is also influenced by other factors not captured in the dataset.

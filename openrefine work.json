@@ -1,0 +1,376 @@
+[
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "player_key",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "jeong sangbin",
+          "sangbin jeong"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "jeong sangbin"
+      },
+      {
+        "from": [
+          "heungmin son",
+          "son heungmin"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "heungmin son"
+      },
+      {
+        "from": [
+          "keehee kim",
+          "kim keehee"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "keehee kim"
+      },
+      {
+        "from": [
+          "joonhong kim",
+          "kim joonhong"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "joonhong kim"
+      },
+      {
+        "from": [
+          "aliyu ibrahim",
+          "ibrahim aliyu"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "aliyu ibrahim"
+      },
+      {
+        "from": [
+          "hoyeon jung",
+          "jung hoyeon"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "hoyeon jung"
+      }
+    ],
+    "description": "Mass edit cells in column player_key"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "player_key",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "eric maxim choupomoting",
+          "ericmaxim choupomoting"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "eric maxim choupomoting"
+      },
+      {
+        "from": [
+          "danley jean jacques",
+          "danley jeanjacques"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "danley jean jacques"
+      },
+      {
+        "from": [
+          "owen graham roache",
+          "owen grahamroache"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "owen graham roache"
+      }
+    ],
+    "description": "Mass edit cells in column player_key"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "player_key",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "nicholas hansen",
+          "nicolas hansen"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "nicholas hansen"
+      },
+      {
+        "from": [
+          "josh atencio",
+          "joshua atencio"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "josh atencio"
+      },
+      {
+        "from": [
+          "player",
+          "beau leroux"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "player"
+      },
+      {
+        "from": [
+          "matheus nascimento",
+          "matheus nascimento de paula"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "matheus nascimento"
+      },
+      {
+        "from": [
+          "aleksei miranchuk",
+          "aleksey miranchuk"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "aleksei miranchuk"
+      },
+      {
+        "from": [
+          "saba lobjanidze",
+          "saba lobzhanidze"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "saba lobjanidze"
+      },
+      {
+        "from": [
+          "antonio carlos",
+          "antonio carlos cunha capocasali junior"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "antonio carlos"
+      },
+      {
+        "from": [
+          "mark delgado",
+          "marky delgado"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "mark delgado"
+      },
+      {
+        "from": [
+          "artem smoliakov",
+          "artem smolyakov"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "artem smoliakov"
+      }
+    ],
+    "description": "Mass edit cells in column player_key"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "player_key",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "david costa",
+          "david da costa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "david costa"
+      },
+      {
+        "from": [
+          "ben cremaschi",
+          "benja cremaschi"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ben cremaschi"
+      },
+      {
+        "from": [
+          "charles sharp",
+          "charlie sharp"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "charles sharp"
+      }
+    ],
+    "description": "Mass edit cells in column player_key"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "player_key",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "nicolas fleuriau",
+          "nicolas fleuriau chateau"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "nicolas fleuriau"
+      },
+      {
+        "from": [
+          "rafael navarro",
+          "rafael navarro leal"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "rafael navarro"
+      },
+      {
+        "from": [
+          "rafael cabral",
+          "rafael cabral barbosa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "rafael cabral"
+      },
+      {
+        "from": [
+          "raul gustavo",
+          "raul gustavo pereira bicalho"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "raul gustavo"
+      },
+      {
+        "from": [
+          "sergio santos gomes",
+          "sergio santos"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "sergio santos gomes"
+      },
+      {
+        "from": [
+          "nkosi tafari",
+          "nkosi tafari burgess"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "nkosi tafari"
+      }
+    ],
+    "description": "Mass edit cells in column player_key"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "player_key",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "yevgen cheberko",
+          "yevhen cheberko"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "yevgen cheberko"
+      }
+    ],
+    "description": "Mass edit cells in column player_key"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "player_key",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "femi awodesu",
+          "obafemi awodesu"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "femi awodesu"
+      },
+      {
+        "from": [
+          "dagur dan orhallsson",
+          "dagur dan thorhallsson"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "dagur dan orhallsson"
+      }
+    ],
+    "description": "Mass edit cells in column player_key"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "player_key",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "zorhan bassong"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "zorhan bassong"
+      }
+    ],
+    "description": "Mass edit cells in column player_key"
+  }
+]

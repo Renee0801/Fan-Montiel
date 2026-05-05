@@ -1,0 +1,18 @@
+{
+  "title": "MLS Player Performance and Salary Analysis",
+  "description": "Analysis of the relationship between MLS player performance and salary using FBref statistics and MLS Players Association salary data.",
+  "authors": [
+    "Ruilin Fan",
+    "Teammate Name"
+  ],
+  "keywords": [
+    "MLS",
+    "sports analytics",
+    "salary analysis",
+    "data integration"
+  ],
+  "datasets": [
+    "FBref MLS 2025 Statistics",
+    "MLS Players Association Salary Guide"
+  ]
+}

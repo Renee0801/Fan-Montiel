@@ -23,9 +23,11 @@ Ultimately, this project demonstrates that while on-field performance is indeed 
 
 ## Data Profile
 
+This project uses two datasets that describe MLS players from different perspectives. One focuses on performance during the 2025 season, while the other focuses on salary. Each dataset is stored separately in the project repository and is used at different stages of the workflow.
+
 ### Dataset 1: FBref 2025 Major League Soccer Player Statistics
 
-The first dataset is the 2025 MLS player statistics table from FBref. FBref is a public football statistics website that provides season level player and team statistics. The project uses the standard player statistics table for Major League Soccer. This table is useful because it gives performance information at the player level and includes variables that can be linked to salary data.
+The first dataset contains player performance statistics for the 2025 MLS season. The file is in Excel format, and each row represents one player. The columns include variables such as player name, team, goals, assists, and appearances. These variables describe how players perform during matches. The dataset is relatively structured, with clear column headers, but there are still small inconsistencies. For example, player names are not always formatted in the same way, and some fields may contain missing values. These issues do not prevent use, but they require attention before analysis.
 
 Expected repository location: `data/raw/MLS_Salary_2025_Fall_Release_Original.csv`
 
@@ -40,7 +42,7 @@ The main limitation of the FBref dataset is that raw goals and assists do not fu
 
 ### Dataset 2: MLS Players Association Salary Guide
 
-The second dataset is the 2025 MLS Players Association Salary Guide. This source reports salary information for MLS players under contract as of October 1, 2025. It includes current annualized base salary and annualized average guaranteed compensation. Guaranteed compensation includes base salary plus signing and guaranteed bonuses annualized over the contract term, but it does not include performance bonuses.
+The second dataset contains salary information from the MLS Players Association. This dataset is in CSV format, and each row also represents a player. The main variables include player name, base salary, and guaranteed compensation. Compared to the performance dataset, this one is more focused and contains fewer variables. One characteristic of this dataset is that salary values are stored as text with currency symbols and commas. This means the values cannot be used directly for numerical analysis and must be converted into numeric format.
 
 Raw repository location: `data/raw/MLS_Salary_2025_Fall_Release.csv`
 
@@ -54,23 +56,25 @@ There are some legal and ethical constraints. The dataset is public and publishe
 
 ### Relationship Between the Datasets
 
-The two datasets are complementary because one measures compensation and the other measures performance. They can be linked by player name and club name. However, direct matching is not always simple because club names and player names may differ across sources. Examples include shortened team names, accent marks, suffixes such as Jr., and different naming conventions for transferred players. We therefore created standardized player and team merge keys.
-
-The integration strategy uses a player key and team key. The player key removes accents, punctuation, suffixes, capitalization differences, and extra spacing. The team key applies team name mappings and then performs the same normalization. The final merged file is stored at: .......
+NEED TO COMPLETE!!!!!!!
 
 
 ## Data Quality
 
-The project identified several data quality issues across the two sources. The first issue was schema inconsistency. FBref stores player names in one column named Player, while the salary guide stores names in separate First Name and Last Name columns. FBref uses Squad for club, while the salary guide uses Team Name. These structural differences required column renaming and field construction before the datasets could be compared.
+Before merging the datasets, we conducted a thorough quality check and carefully reviewed the data sources. Understanding the origin of the data is crucial, as it helps to clarify both its strengths and its inherent limitations—a principle we learned during our coursework.
 
-The second issue was syntactic inconsistency. Salary values were stored as strings with dollar signs and commas. These formatting characters prevented direct numerical analysis. The cleaning workflow converted base salary and guaranteed compensation into numeric floating point values. Similarly, statistics columns such as minutes, goals, assists, starts, and matches played were converted into numeric fields.
+The first dataset was scraped from the FBref website and contains player statistics for the 2025 MLS (Major League Soccer) season. FBref is a widely recognized and specialized public resource for football statistics, with its dedicated MLS section providing comprehensive player-level data. This dataset encompasses variables such as player names, clubs, positions, ages, appearances, minutes played, goals scored, and assists. Some tables within the dataset also provide advanced statistical metrics, such as "Expected Goals" (xG) and "Expected Assists" (xA). Given that this data originates from a reputable platform and adheres to a standardized structure, its overall reliability is high. However, upon closer inspection, we did identify some minor issues: player name formatting was not always entirely consistent, and some fields contained missing values. Although such issues are not uncommon in data processing, they nonetheless require careful handling.
 
-The third issue was semantic inconsistency in team names. The two sources used different versions of some club names. Examples from the project include Atlanta Utd versus Atlanta United, D.C. United versus DC United, NYCFC versus New York City, and Vancouver W'Caps versus Vancouver Whitecaps. Without standardization, these records would fail to merge even if they referred to the same club. The cleaning workflow uses a club mapping dictionary and normalized team keys to reduce these errors.
+The second dataset was sourced from the salary guide published by the MLS Players Association. This dataset compiles salary information for all active, signed players as of October 1, 2025. It includes two key metrics: "Base Salary" and "Guaranteed Compensation." According to the source's documentation, "Guaranteed Compensation" comprises the base salary plus any guaranteed bonuses, but excludes performance-based bonuses contingent upon individual achievement. The dataset features variables such as players' first names, last names, clubs, positions, and specific salary figures. Given that this data is publicly released by an official organization, its credibility is exceptionally high. Nevertheless—much like the aforementioned player performance dataset—this salary dataset also presents formatting challenges: the salary figures are stored as text strings containing currency symbols and comma separators, rendering the data unsuitable for direct use in subsequent statistical analysis.
 
-The fourth issue was player name variation. Names may contain accents, punctuation, suffixes, or alternate formatting. For example, suffixes such as Jr. and accent marks can make the same player appear different across datasets. The cleaning process normalizes names by converting to lowercase, removing accents, removing punctuation, removing suffixes, and trimming repeated spaces. This improves matching while preserving the original names in separate columns.
+Following a comprehensive review of the two datasets described above, a number of data quality issues emerged. The most prominent issue among these is the inconsistency in player names. The two datasets exhibit subtle differences in name formatting; even minor discrepancies can prevent the data from being correctly matched and linked. Given that this data integration project is structured around the "player" as the fundamental unit, this issue of name inconsistency will directly impact the success rate of the data merging operations.
 
-The fifth issue was duplicate or transferred player records. Some players may appear more than once in the statistics dataset if they played for multiple clubs during the season. This creates a challenge because the salary guide lists the player under one team at the time of the salary release. To avoid double counting, the workflow sorts by minutes and keeps the observation with the highest minutes played as the player's primary season record.
+Furthermore, both datasets contain missing values. In the player performance dataset, statistical data for certain players is incomplete—a phenomenon likely attributable to their limited playing time. Similarly, within the salary dataset, a small number of entries suffer from incomplete or entirely missing data. Failure to properly address these data gaps could introduce bias into subsequent analytical results; this impact is particularly pronounced when investigating the interrelationships between various variables.
 
-The sixth issue was coverage mismatch. Not every salary guide player appears in the FBref performance table, and not every FBref player appears in the salary guide. Reasons may include timing differences, roster changes, short term contracts, transfers, missing statistics, or naming differences that remain unresolved. The current workflow produced 664 matched records in the project notebook after name and club standardization. This is a good result for analysis, but unmatched records remain a limitation.
+Additionally, we observed the presence of duplicate records. Records for certain players appear multiple times, which could lead to double-counting. If these duplicates are not removed, the results may be skewed, thereby compromising the accuracy of aggregate statistics.
 
-Overall, the quality assessment shows that both datasets are usable, but only after cleaning and careful integration. The most important quality risk is false non matches caused by naming differences. The project addresses this risk through explicit merge keys, club mapping, duplicate handling, and documentation of unmatched records.
+Another issue concerns data types. Salary figures are stored as strings rather than numerical values. Consequently, they cannot be directly utilized in computational tasks such as correlation analysis or data visualization. Without proper type conversion, the dataset cannot support quantitative analysis.
+
+Although the overall structure of these datasets is sound and their sources are reliable, they are not yet in a state ready for immediate analysis. Most of the identified issues relate to data consistency, formatting standards, and completeness. Such problems are quite common when handling real-world data derived from multiple sources.
+
+In summary, while the overall quality of the dataset is fair, it still requires data cleaning before it can be put to use. By proactively identifying and resolving these issues, we can properly prepare the data for integration, thereby ensuring that subsequent analytical work is built upon a foundation of consistent and reliable information.

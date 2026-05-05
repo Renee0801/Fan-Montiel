@@ -140,6 +140,22 @@ Finally, improvements could be made to the data integration process itself. Whil
 
 Overall, future work has the potential to significantly enhance both the depth and breadth of this project. By incorporating additional variables, expanding the dataset, refining methodology, and improving data integration, researchers can build upon this foundation to develop a more comprehensive understanding of how performance and compensation interact in professional soccer.
 
+## Challenges
+
+This project involved several significant challenges, primarily related to data integration, data quality, and the limitations of real-world datasets.
+
+One of the most challenging aspects was integrating the two datasets due to inconsistencies in player names. Although both datasets referred to the same players, the formatting of names differed in subtle but important ways. Variations included differences in capitalization, spacing, punctuation, accents, and name ordering. Even minor inconsistencies prevented exact matches during the merge process. To address this issue, we implemented a multi-step cleaning process, including lowercasing, trimming whitespace, and removing special characters. We also used OpenRefine clustering techniques to identify and resolve name variations. While this significantly improved the match rate, it required careful manual review to ensure that only correct matches were merged.
+
+Another challenge was dealing with unmatched records. Even after extensive cleaning, a substantial number of players appeared in only one dataset. Some players in the salary dataset did not appear in the performance dataset, likely due to limited playing time or differences in data coverage. Similarly, some players in the performance dataset did not have corresponding salary records. This reduced the number of observations available for analysis and required us to restrict the final dataset to players appearing in both sources.
+
+Handling duplicate records was also a complex issue. Some players appeared multiple times in the merged dataset due to transfers between clubs or differences in how the datasets were structured. Without addressing this issue, certain players would have been overrepresented in the analysis. To resolve this, we implemented a rule to keep only the observation with the highest minutes played, ensuring that each player was represented by their primary contribution during the season.
+
+Data type inconsistencies presented additional challenges. In the salary dataset, compensation values were stored as text strings containing currency symbols and commas, which prevented direct numerical analysis. These values had to be cleaned and converted into numeric format. Similarly, some numerical fields in the performance dataset required conversion from text to numeric types. Another challenge involved missing data. Some players had incomplete records, particularly those with limited playing time. Instead of attempting to impute missing values, which could introduce bias, we chose to remove records that were missing critical variables. While this improved data reliability, it reduced the size of the dataset.
+
+Finally, interpreting the results required careful consideration. The dataset primarily captured offensive statistics, which do not fully represent the contributions of all player positions. This limitation made it important to avoid overgeneralizing conclusions and to acknowledge that the analysis is more applicable to attacking players.
+
+Overall, these challenges highlight the complexity of working with real-world data and the importance of careful data cleaning, integration, and interpretation.
+
 
 
 

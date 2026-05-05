@@ -162,7 +162,7 @@ To reproduce this project, follow these steps:
 1. Clone the GitHub repository.
 
 2. Install required dependencies:
-   - Python 3.x
+   - Python 3.xx (any python above 3)
    - pandas
    - numpy
    - matplotlib

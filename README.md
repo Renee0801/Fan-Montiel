@@ -79,7 +79,7 @@ Although the overall structure of these datasets is sound and their sources are 
 
 In summary, while the overall quality of the dataset is fair, it still requires data cleaning before it can be put to use. By proactively identifying and resolving these issues, we can properly prepare the data for integration, thereby ensuring that subsequent analytical work is built upon a foundation of consistent and reliable information.
 
-### Data Cleaning
+## Data Cleaning
 
 After identifying several issues within the two datasets, we executed a series of data cleaning steps aimed at rendering the data suitable for integration and analysis. The objective of this process was not to alter the original content of the data itself, but rather to ensure sufficient consistency and reliability to support meaningful comparative analysis.
 
@@ -96,3 +96,5 @@ A further step involved a comprehensive review of the data types for all variabl
 Upon completing the data cleaning for both datasets individually, the next task was to prepare for data integration. Since these two datasets are linked via the "player name" field, the consistency of this specific field was of paramount importance. The series of data cleaning steps executed previously laid the foundation for achieving a more precise data merge. We used an "inner join" approach to merge the data, which means we only kept the player records that appeared in both datasets. This strategy ensured that the final dataset generated contained, for every single record, both the player's performance statistics and their salary information. Once the datasets were merged, we conducted a final verification to confirm data consistency. This verification included checking for any unexpected missing values ​​and ensuring that the data types for all columns were accurate. Subsequently, the cleaned and merged dataset was saved to the `data/processed/` directory, while the original files were retained in the `data/raw/` directory. Retaining both versions helps enhance the transparency of the data processing pipeline and facilitates the reproducibility of the workflow.
 
 Overall, the primary focus of this data cleaning effort was to enhance data consistency, eliminate errors, and prepare the data for subsequent analysis. Although the steps taken were relatively simple and straightforward, they were crucial for ensuring the reliability of the analytical results. Had these necessary adjustments not been made, the data integration process would not have proceeded smoothly, potentially leading to analytical conclusions that were misleading.
+
+## Findings

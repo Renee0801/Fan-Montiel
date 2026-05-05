@@ -119,3 +119,27 @@ However, efficiency metrics showed a more complicated pattern. Goal contribution
 The salary efficiency metric also revealed important outliers. For example, **Anthony Markanich** recorded **10 goal contributions** with guaranteed compensation of **$104,000**, resulting in about **$10,400 per goal contribution**. Other efficient players included **Darren Yapi**, **Paul Rothrock**, and **Alex Freeman**, each producing strong value relative to salary. These players show that lower-paid players can still provide meaningful production.
 
 Finally, the regression model using goal contributions and minutes played explained about **35.4%** of the variation in guaranteed compensation, based on an **R-squared of 0.354**. The model estimated that each additional goal contribution was associated with approximately **$146,749** more in guaranteed compensation, holding minutes constant. Each additional minute played was associated with about **$88** more in compensation. Overall, the findings show that performance matters, but salary is also influenced by other factors not captured in the dataset.
+
+## Future Work
+
+While this project provides valuable insights into the relationship between salary and performance in Major League Soccer, there are several opportunities for future work that could improve the depth, accuracy, and scope of the analysis.
+
+One major area for improvement is the inclusion of more comprehensive performance metrics. In this project, we focused primarily on goals, assists, and derived offensive metrics such as goal contributions and per-90 statistics. While these metrics are effective indicators of attacking performance, they do not fully capture the contributions of all player positions. Defenders and goalkeepers, for example, contribute in ways that are not reflected in goals or assists. Future work could incorporate defensive statistics such as tackles, interceptions, clearances, and goalkeeper-specific metrics such as saves and clean sheets. Including these additional variables would allow for a more balanced and accurate evaluation of player performance across all positions.
+
+Another important extension would be to segment the analysis by player position. In the current analysis, all players are treated as part of a single group, which introduces bias because different positions have fundamentally different roles. For example, forwards are expected to produce goals, while defenders are not. By dividing players into positional groups—such as forwards, midfielders, defenders, and goalkeepers—we could perform more meaningful comparisons and develop position-specific performance metrics. This would improve the interpretability of the results and reduce bias in the analysis.
+
+A further area of improvement involves expanding the dataset to include multiple seasons. The current project focuses on a single season of MLS data, which limits the ability to analyze trends over time. By incorporating data from multiple seasons, future work could examine how the relationship between salary and performance evolves. This would allow for a larger time range analysis, enabling researchers to determine whether performance consistently predicts salary or whether the relationship changes due to factors such as league growth, salary cap changes, or shifting market conditions.
+
+Additionally, future work could explore team level analysis. Instead of focusing solely on individual players, researchers could aggregate data at the team level to evaluate how effectively teams allocate their salary budgets. For example, it would be possible to calculate total team salary and compare it to total team performance metrics such as goals scored or points earned. This would provide insights into which teams are most efficient in converting financial investment into competitive success.
+
+Another potential improvement is the inclusion of contextual variables that influence salary but are not captured in the current datasets. These variables could include player age, years of experience, international appearances, transfer history, and contract length. These factors are often important determinants of salary but are not directly reflected in performance statistics. Including these variables in future models would help explain some of the variation observed in the current analysis and lead to a more comprehensive understanding of salary determination.
+
+From a methodological perspective, future work could also involve more advanced modeling techniques. In this project, we primarily relied on descriptive statistics, correlations, and simple regression analysis. While these methods are effective for identifying general patterns, more sophisticated approaches such as multivariate regression, regularization methods, or machine learning models could provide deeper insights. These methods could help quantify the relative importance of different variables and improve predictive accuracy.
+
+Finally, improvements could be made to the data integration process itself. While OpenRefine clustering and manual cleaning significantly improved the match rate between datasets, some records remained unmatched.
+
+Overall, future work has the potential to significantly enhance both the depth and breadth of this project. By incorporating additional variables, expanding the dataset, refining methodology, and improving data integration, researchers can build upon this foundation to develop a more comprehensive understanding of how performance and compensation interact in professional soccer.
+
+
+
+
